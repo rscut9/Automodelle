@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ficha de {{MODELO}} ({{ANIO}}) en Automodelle." />
+  <title>{{MODELO}} ({{ANIO}}) — Automodelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/styles.css" />
+</head>
+<body>
+  <main class="model-page">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="../../../index.html">Todos</a><span aria-hidden="true">/</span>
+      <a href="../../../continentes/{{CONTINENTE_SLUG}}.html">{{CONTINENTE}}</a><span aria-hidden="true">/</span>
+      <a href="index.html">{{MARCA}}</a><span aria-hidden="true">/</span>
+      <span aria-current="page">{{MODELO}}</span>
+    </nav>
+    <article class="model-detail">
+      <div class="model-detail-heading">
+        <p>{{CONTINENTE_MAYUS}} / {{MARCA_MAYUS}} / {{ANIO}}</p>
+        <h1>{{MODELO}}</h1>
+      </div>
+      <img src="../../../{{IMAGEN}}" alt="{{ALT}}" />
+      <div class="model-detail-body">
+        <h2>La historia del modelo</h2>
+        <p>Escribe aquí la historia del modelo.</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "marcas": [
+    {
+      "nombre": "Audi",
+      "continente": "Europa",
+      "logo": "assets/images/Europa/Audi/Audi-Logo_2016.svg",
+      "modelos": [
+        {
+          "nombre": "Audi RS2 Avant",
+          "anio": 1994,
+          "archivo": "audi-rs2-avant-1994.html",
+          "imagen": "assets/images/Europa/Audi/RS2/audi-rs2-avant-1994.jpg",
+          "alt": "Audi RS2 Avant azul visto de tres cuartos"
+        }
+      ]
+    }
+  ]
+}

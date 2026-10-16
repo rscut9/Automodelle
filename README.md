@@ -1,6 +1,6 @@
 # Automodelle
 
-Archivo estático y responsive de automóviles. El inicio reúne las marcas; cada continente muestra sus marcas y cada marca lista sus modelos y fichas individuales.
+Archivo estático y responsive de automóviles. El inicio reúne las marcas; cada continente muestra sus marcas y cada marca lista sus modelos y fichas individuales. Los listados se generan a partir de `catalogo.json`.
 
 ## Tecnología
 
@@ -12,6 +12,9 @@ Archivo estático y responsive de automóviles. El inicio reúne las marcas; cad
 ```text
 Automodelle/
 ├── index.html
+├── catalogo.json
+├── scripts/generar-catalogo.mjs
+├── plantillas/modelo.html
 ├── continentes/
 │   ├── europa.html
 │   ├── america.html
@@ -37,4 +40,11 @@ El proyecto no depende de un sistema de compilación: cualquier alojamiento de p
 
 Guarda las imágenes en `assets/images/`, organizadas por continente, marca y modelo. Por ejemplo: `assets/images/Europa/Audi/RS2/`. Usa archivos WebP o AVIF optimizados cuando puedas.
 
-Para añadir un modelo, crea su ficha en `modelos/Continente/Marca/` y enlázala desde el `index.html` de esa marca. Para añadir una marca, crea su carpeta y página, y enlázala desde el inicio y la página de su continente. Las páginas comparten `assets/css/styles.css`.
+## Añadir contenido
+
+1. Guarda el logo y las imágenes en `assets/images/Continente/Marca/`.
+2. Añade la marca o el modelo a `catalogo.json`. En cada modelo, `archivo` es el nombre de su futura ficha HTML.
+3. Ejecuta `node scripts/generar-catalogo.mjs` desde la raíz del proyecto.
+4. Edita la ficha creada en `modelos/Continente/Marca/` para escribir la historia y añadir más fotografías.
+
+El generador actualiza el inicio, las páginas de continentes y los índices de marcas. Solo crea una ficha de modelo si todavía no existe, por lo que no sobrescribe las historias escritas a mano. La base de las fichas nuevas está en `plantillas/modelo.html`. Las páginas comparten `assets/css/styles.css`.
