@@ -43,10 +43,12 @@ Guarda las imágenes en `assets/images/`, organizadas por continente, marca y mo
 ## Añadir contenido
 
 1. Guarda el logo y las imágenes en `assets/images/Continente/Marca/`.
-2. Añade la marca o el modelo a `catalogo.json`. En cada modelo, `archivo` es el nombre de su futura ficha HTML.
+2. Añade la marca o el modelo a `catalogo.json`. En cada modelo, `archivo` es el nombre de su ficha HTML. En `galeria`, añade las rutas de sus fotografías con un texto `alt` descriptivo; la primera será la portada del modelo.
 3. Ejecuta `node scripts/generar-catalogo.mjs` desde la raíz del proyecto.
-4. Edita la ficha creada en `modelos/Continente/Marca/`: completa la historia, añade datos verificados, fotografías con texto alternativo y sus créditos.
+4. Edita la ficha creada en `modelos/Continente/Marca/`: completa la historia, añade datos verificados y documenta las fuentes. Para añadir fotografías, actualiza `galeria` en `catalogo.json` y vuelve a ejecutar el generador.
 
-El generador actualiza el inicio, las páginas de continentes y los índices de marcas. Solo crea una ficha de modelo si todavía no existe, por lo que no sobrescribe las historias escritas a mano. La base de las fichas nuevas está en `plantillas/modelo.html`. Las páginas comparten `assets/css/styles.css`.
+El generador actualiza el inicio, las páginas de continentes, los índices de marcas y únicamente la zona marcada como galería dentro de cada ficha. Conserva la historia, los datos y las fuentes escritos a mano. La base de las fichas nuevas está en `plantillas/modelo.html`. Las páginas comparten `assets/css/styles.css`.
 
 La ficha incluye galería, datos básicos, historia y fuentes. Los datos que aún no se hayan comprobado deben quedar fuera de la ficha hasta tener una fuente fiable.
+
+Cada elemento de `galeria` puede incluir `descripcion` y `credito`. Si conoces al autor o la procedencia de una imagen, anótalo ahí y en la sección de fuentes de la ficha.

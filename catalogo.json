@@ -9,8 +9,13 @@
           "nombre": "Audi RS2 Avant",
           "anio": 1994,
           "archivo": "audi-rs2-avant-1994.html",
-          "imagen": "assets/images/Europa/Audi/RS2/audi-rs2-avant-1994.jpg",
-          "alt": "Audi RS2 Avant azul visto de tres cuartos"
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/RS2/audi-rs2-avant-1994.jpg",
+              "alt": "Audi RS2 Avant azul visto de tres cuartos",
+              "descripcion": "Audi RS2 Avant · 1994"
+            }
+          ]
         }
       ]
     }

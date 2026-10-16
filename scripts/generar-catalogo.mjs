@@ -18,6 +18,7 @@ const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 })[character]);
 const safeSegment = value => typeof value === 'string' && /^[\p{L}\p{N}][\p{L}\p{N} ._-]*$/u.test(value) && !value.includes('..');
+const safeImagePath = value => typeof value === 'string' && value.startsWith('assets/images/') && !value.split('/').includes('..');
 const exists = async file => { try { await access(file); return true; } catch { return false; } };
 const absolute = relative => path.join(root, relative);
 const asset = (prefix, relative) => `${prefix}${relative.split(path.sep).join('/')}`;
@@ -63,10 +64,30 @@ function brandCard(brand, prefix) {
 }
 
 function modelCard(brand, model) {
+  const cover = model.galeria[0];
   return `<a class="model-card" href="${escapeHtml(model.archivo)}" aria-label="Ver ficha del ${escapeHtml(model.nombre)} de ${model.anio}">
-        <img src="${asset('../../../', model.imagen)}" alt="${escapeHtml(model.alt)}" loading="lazy" />
+        <img src="${asset('../../../', cover.archivo)}" alt="${escapeHtml(cover.alt)}" loading="lazy" />
         <div class="model-card-copy"><span>${escapeHtml(brand.nombre.toUpperCase())} / ${model.anio}</span><h2>${escapeHtml(model.nombre)}</h2><p>${model.anio}</p></div>
       </a>`;
+}
+
+function galleryFigures(model) {
+  return model.galeria.map((photo, index) => {
+    const caption = photo.descripcion || `${model.nombre} · ${model.anio}`;
+    const credit = photo.credito ? ` · ${photo.credito}` : '';
+    return `          <figure>
+            <img src="${asset('../../../', photo.archivo)}" alt="${escapeHtml(photo.alt)}"${index ? ' loading="lazy"' : ''} />
+            <figcaption>${escapeHtml(caption + credit)}</figcaption>
+          </figure>`;
+  }).join('\n');
+}
+
+function updateGallery(content, model) {
+  const start = '<!-- catalogo:galeria:inicio -->';
+  const end = '<!-- catalogo:galeria:fin -->';
+  const pattern = /<!-- catalogo:galeria:inicio -->[\s\S]*?<!-- catalogo:galeria:fin -->/;
+  if (!pattern.test(content)) throw new Error(`La ficha ${model.archivo} no tiene los marcadores de galería.`);
+  return content.replace(pattern, `${start}\n${galleryFigures(model)}\n          ${end}`);
 }
 
 function listPage(active, brands, prefix) {
@@ -117,7 +138,7 @@ function modelPage(brand, model) {
     MODELO: model.nombre, ANIO: model.anio, CONTINENTE: brand.continente,
     CONTINENTE_SLUG: continentSlugs.get(brand.continente), MARCA: brand.nombre,
     CONTINENTE_MAYUS: brand.continente.toUpperCase(), MARCA_MAYUS: brand.nombre.toUpperCase(),
-    IMAGEN: model.imagen, ALT: model.alt,
+    GALERIA: galleryFigures(model),
   };
   return modelTemplate.replace(/\{\{([A-Z_]+)\}\}/g, (_, key) => {
     if (!(key in replacements)) throw new Error(`Marcador desconocido: ${key}`);
@@ -131,13 +152,15 @@ for (const brand of catalog.marcas) {
   const key = `${brand.continente}/${brand.nombre}`;
   if (brandKeys.has(key)) throw new Error(`Marca duplicada: ${key}`);
   brandKeys.add(key);
-  if (!await exists(absolute(brand.logo))) throw new Error(`Falta el logo: ${brand.logo}`);
+  if (!safeImagePath(brand.logo) || !await exists(absolute(brand.logo))) throw new Error(`Falta el logo o su ruta no es válida: ${brand.logo}`);
   const modelFiles = new Set();
   for (const model of brand.modelos) {
-    if (!safeSegment(model.archivo) || !model.archivo.endsWith('.html') || !Number.isInteger(model.anio) || !model.nombre || !model.alt) throw new Error(`Modelo inválido: ${model.nombre}`);
+    if (!safeSegment(model.archivo) || !model.archivo.endsWith('.html') || !Number.isInteger(model.anio) || !model.nombre || !Array.isArray(model.galeria) || !model.galeria.length) throw new Error(`Modelo inválido: ${model.nombre}`);
     if (modelFiles.has(model.archivo)) throw new Error(`Ficha duplicada: ${model.archivo}`);
     modelFiles.add(model.archivo);
-    if (!await exists(absolute(model.imagen))) throw new Error(`Falta la imagen: ${model.imagen}`);
+    for (const photo of model.galeria) {
+      if (!safeImagePath(photo.archivo) || !photo.alt || !await exists(absolute(photo.archivo))) throw new Error(`Falta una imagen o su ruta o descripción no es válida: ${photo.archivo}`);
+    }
   }
 }
 
@@ -150,6 +173,10 @@ for (const brand of catalog.marcas) {
   await writeIfChanged(`${folder}/index.html`, brandPage(brand));
   for (const model of brand.modelos) {
     const relative = `${folder}/${model.archivo}`;
-    if (!await exists(absolute(relative))) await writeIfChanged(relative, modelPage(brand, model));
+    if (!await exists(absolute(relative))) {
+      await writeIfChanged(relative, modelPage(brand, model));
+    } else {
+      await writeIfChanged(relative, updateGallery(await readFile(absolute(relative), 'utf8'), model));
+    }
   }
 }
