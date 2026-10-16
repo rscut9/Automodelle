@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automodelle, un archivo visual para recorrer la historia del automóvil." />
+  <title>Automodelle — Archivo del automóvil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Automodelle, inicio"><span class="brand-mark">A</span><span>AUTOMODELLE</span></a>
+    <nav aria-label="Navegación principal"><a href="#archivo">Archivo</a><a href="#epocas">Épocas</a><a href="#proyecto">El proyecto</a></nav>
+    <button class="menu-button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> El archivo del automóvil</p>
+        <h1>Cada coche.<br><em>Cada historia.</em></h1>
+        <p class="intro">Un lugar para descubrir las marcas, los modelos y las ideas que pusieron al mundo sobre ruedas.</p>
+        <form class="search" id="main-search" role="search">
+          <label class="sr-only" for="search-input">Buscar una marca o modelo</label>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+          <input id="search-input" type="search" placeholder="Busca una marca o modelo" autocomplete="off" />
+          <button type="submit">Explorar <span>↗</span></button>
+        </form>
+        <p class="search-note">El archivo abrirá próximamente.</p>
+      </div>
+      <div class="hero-visual reveal" aria-label="Ilustración abstracta de un automóvil clásico">
+        <div class="year-stamp">DESDE<br><strong>1886</strong></div><div class="sun"></div>
+        <svg class="car-drawing" viewBox="0 0 760 340" role="img" aria-label="Silueta técnica de automóvil">
+          <path class="car-fill" d="M70 229c21-7 43-14 66-20l88-91c16-17 37-27 60-27h174c35 0 69 12 96 35l77 64c29 4 49 12 59 25l10 38H65l5-24Z"/>
+          <path class="car-line" d="M47 253h657M70 229c21-7 43-14 66-20l88-91c16-17 37-27 60-27h174c35 0 69 12 96 35l77 64c29 4 49 12 59 25l10 38M229 119l-45 88h371l-103-88H229Zm129-25v113M111 215l75 7m373-14 77-10M268 228h122"/>
+          <g class="wheel"><circle cx="181" cy="253" r="55"/><circle cx="181" cy="253" r="25"/><path d="m181 228 18 42m7-17-43 17m18-17-35-28"/></g>
+          <g class="wheel"><circle cx="579" cy="253" r="55"/><circle cx="579" cy="253" r="25"/><path d="m579 228 18 42m7-17-43 17m18-17-35-28"/></g>
+        </svg>
+        <p class="figure-caption"><span>01</span> La máquina que cambió el paisaje</p>
+      </div>
+      <a class="scroll-cue" href="#archivo"><span>Desliza para explorar</span><i>↓</i></a>
+    </section>
+    <section class="archive" id="archivo">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> Explora el archivo</p>
+        <h2>Una historia.<br><em>Muchas formas.</em></h2>
+        <p>El catálogo está creciendo. Muy pronto podrás recorrerlo por marca, época, país o tipo de carrocería.</p>
+      </div>
+      <div class="archive-grid">
+        <article class="browse-card browse-card--red reveal"><span class="card-number">01</span><div class="card-icon globe" aria-hidden="true"><span></span></div><div><p>Explorar por</p><h3>Marcas</h3></div><button class="round-button" data-toast="El índice de marcas llegará en la próxima fase" aria-label="Explorar marcas">↗</button></article>
+        <article class="browse-card browse-card--cream reveal"><span class="card-number">02</span><div class="card-icon rings" aria-hidden="true"><span></span><span></span><span></span></div><div><p>Explorar por</p><h3>Épocas</h3></div><button class="round-button" data-toast="La línea temporal está en preparación" aria-label="Explorar épocas">↗</button></article>
+        <article class="browse-card browse-card--blue reveal"><span class="card-number">03</span><div class="card-icon profile" aria-hidden="true"><svg viewBox="0 0 150 70"><path d="M10 49h130M21 48l14-23h57l23 23M48 25v23"/></svg></div><div><p>Explorar por</p><h3>Carrocería</h3></div><button class="round-button" data-toast="Los tipos de carrocería llegarán pronto" aria-label="Explorar carrocerías">↗</button></article>
+      </div>
+    </section>
+    <section class="timeline" id="epocas">
+      <div class="timeline-copy reveal"><p class="eyebrow eyebrow--light"><span></span> Un viaje en el tiempo</p><h2>De la manivela<br><em>al mañana.</em></h2><p>Más de un siglo de diseño, ingeniería y cultura. La futura línea temporal conectará cada modelo con el mundo que lo vio nacer.</p></div>
+      <div class="timeline-track reveal" aria-label="Línea temporal conceptual"><div class="track-line"><span></span></div><button class="era active" data-era="Pioneros"><b>1880</b><span>Pioneros</span></button><button class="era" data-era="Forma"><b>1930</b><span>Forma</span></button><button class="era" data-era="Velocidad"><b>1960</b><span>Velocidad</span></button><button class="era" data-era="Digital"><b>1990</b><span>Digital</span></button><button class="era" data-era="Eléctrico"><b>2020</b><span>Eléctrico</span></button></div>
+      <p class="era-message" id="era-message">1880 — Pioneros: el comienzo de una nueva movilidad.</p>
+    </section>
+    <section class="manifesto" id="proyecto">
+      <p class="manifesto-index">A—Z / 1886—HOY</p><div></div>
+      <div class="manifesto-text reveal"><p>No es solo una lista.</p><h2>Es la memoria<br>de cómo aprendimos<br><em>a movernos.</em></h2></div>
+      <div class="manifesto-side reveal"><p>Automodelle nace para reunir en un solo lugar la historia completa del automóvil: clara, visual y conectada.</p><a href="#inicio">Volver al principio <span>↑</span></a></div>
+    </section>
+  </main>
+  <footer><a class="brand brand--footer" href="#inicio"><span class="brand-mark">A</span><span>AUTOMODELLE</span></a><p>Archivo del automóvil · En construcción</p><p>Hecho para quienes miran dos veces.</p></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
