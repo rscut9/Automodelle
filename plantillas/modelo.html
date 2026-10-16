@@ -23,11 +23,36 @@
         <p>{{CONTINENTE_MAYUS}} / {{MARCA_MAYUS}} / {{ANIO}}</p>
         <h1>{{MODELO}}</h1>
       </div>
-      <img src="../../../{{IMAGEN}}" alt="{{ALT}}" />
-      <div class="model-detail-body">
-        <h2>La historia del modelo</h2>
-        <p>Escribe aquí la historia del modelo.</p>
+      <section class="model-gallery" aria-labelledby="gallery-title">
+        <h2 id="gallery-title">Galería</h2>
+        <div class="model-gallery-grid">
+          <figure>
+            <img src="../../../{{IMAGEN}}" alt="{{ALT}}" />
+            <figcaption>{{MODELO}} · {{ANIO}}</figcaption>
+          </figure>
+          <!-- Añade aquí más figuras con fotografías y sus descripciones. -->
+        </div>
+      </section>
+      <div class="model-content">
+        <section class="model-facts" aria-labelledby="facts-title">
+          <h2 id="facts-title">Datos básicos</h2>
+          <dl>
+            <div><dt>Marca</dt><dd>{{MARCA}}</dd></div>
+            <div><dt>Modelo</dt><dd>{{MODELO}}</dd></div>
+            <div><dt>Año</dt><dd>{{ANIO}}</dd></div>
+            <div><dt>Continente</dt><dd>{{CONTINENTE}}</dd></div>
+            <!-- Añade datos técnicos solo cuando estén verificados. -->
+          </dl>
+        </section>
+        <section class="model-detail-body" aria-labelledby="story-title">
+          <h2 id="story-title">La historia del modelo</h2>
+          <p>Escribe aquí la historia del modelo.</p>
+        </section>
       </div>
+      <section class="model-sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">Fuentes y créditos</h2>
+        <p>Documenta aquí las fuentes de los datos y la procedencia de las fotografías.</p>
+      </section>
     </article>
   </main>
 </body>
