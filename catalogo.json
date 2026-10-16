@@ -6,6 +6,11 @@
       "logo": "assets/images/Europa/Audi/Audi-Logo_2016.svg",
       "modelos": [
         {
+          "nombre": "Audi A3 8L",
+          "anio": 1996,
+          "galeria": []
+        },
+        {
           "nombre": "Audi RS2 Avant",
           "anio": 1994,
           "archivo": "audi-rs2-avant-1994.html",

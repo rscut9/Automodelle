@@ -43,7 +43,7 @@ Guarda las imágenes en `assets/images/`, organizadas por continente, marca y mo
 ## Añadir contenido
 
 1. Guarda el logo y las imágenes en `assets/images/Continente/Marca/`.
-2. Añade la marca o el modelo a `catalogo.json`. En cada modelo, `archivo` es el nombre de su ficha HTML. En `galeria`, añade las rutas de sus fotografías con un texto `alt` descriptivo; la primera será la portada del modelo.
+2. Añade la marca o el modelo a `catalogo.json`. Cada página de marca muestra décadas desplegables de 1900–1909 a 2020–2029, incluso si todavía están vacías; las décadas con modelos se abren inicialmente. Los modelos se colocan automáticamente según `anio`. Para una ficha completa, `archivo` es el nombre de su HTML y `galeria` contiene sus fotografías con un texto `alt` descriptivo; la primera será la portada. Para anunciar un modelo sin ficha ni imagen todavía, omite `archivo` y usa `"galeria": []`: aparecerá como «Ficha en preparación» sin enlace.
 3. Ejecuta `node scripts/generar-catalogo.mjs` desde la raíz del proyecto.
 4. Edita la ficha creada en `modelos/Continente/Marca/`: completa la historia, añade datos verificados y documenta las fuentes. Para añadir fotografías, actualiza `galeria` en `catalogo.json` y vuelve a ejecutar el generador.
 

@@ -11,6 +11,8 @@ const continents = [
   ['Oceanía', 'oceania'],
 ];
 const continentSlugs = new Map(continents);
+const firstDecade = 1900;
+const decadeLimit = 2030;
 const catalog = JSON.parse(await readFile(path.join(root, 'catalogo.json'), 'utf8'));
 const modelTemplate = await readFile(path.join(root, 'plantillas', 'modelo.html'), 'utf8');
 
@@ -64,11 +66,38 @@ function brandCard(brand, prefix) {
 }
 
 function modelCard(brand, model) {
+  if (!model.archivo) return `<article class="model-card model-card-pending" aria-label="${escapeHtml(model.nombre)}, ficha en preparación">
+        <div class="model-card-copy"><span>${escapeHtml(brand.nombre.toUpperCase())} / ${model.anio}</span><h3>${escapeHtml(model.nombre)}</h3><p>Ficha en preparación</p></div>
+      </article>`;
   const cover = model.galeria[0];
   return `<a class="model-card" href="${escapeHtml(model.archivo)}" aria-label="Ver ficha del ${escapeHtml(model.nombre)} de ${model.anio}">
         <img src="${asset('../../../', cover.archivo)}" alt="${escapeHtml(cover.alt)}" loading="lazy" />
-        <div class="model-card-copy"><span>${escapeHtml(brand.nombre.toUpperCase())} / ${model.anio}</span><h2>${escapeHtml(model.nombre)}</h2><p>${model.anio}</p></div>
+        <div class="model-card-copy"><span>${escapeHtml(brand.nombre.toUpperCase())} / ${model.anio}</span><h3>${escapeHtml(model.nombre)}</h3><p>${model.anio}</p></div>
       </a>`;
+}
+
+function modelDecade(model) {
+  return Math.floor(model.anio / 10) * 10;
+}
+
+function decadeSections(brand) {
+  const decades = new Map();
+  for (const model of brand.modelos) {
+    const start = modelDecade(model);
+    if (!decades.has(start)) decades.set(start, []);
+    decades.get(start).push(model);
+  }
+  const starts = Array.from({ length: (decadeLimit - firstDecade) / 10 }, (_, index) => firstDecade + index * 10);
+  return starts.map(start => {
+    const models = decades.get(start) || [];
+    const count = models.length ? `${models.length} ${models.length === 1 ? 'modelo' : 'modelos'}` : 'Sin modelos';
+    return `<details class="brand-decade${models.length ? '' : ' brand-decade-empty'}"${models.length ? ' open' : ''}>
+      <summary class="brand-decade-summary"><h2 class="brand-decade-title">${start}–${start + 9}</h2><span class="brand-decade-count">${count}</span></summary>
+      ${models.length ? `<div class="catalogue-grid">
+        ${models.sort((a, b) => a.anio - b.anio || a.nombre.localeCompare(b.nombre, 'es')).map(model => modelCard(brand, model)).join('\n        ')}
+      </div>` : '<p class="brand-decade-placeholder">Todavía no hay modelos en esta década.</p>'}
+    </details>`;
+  }).join('\n    ');
 }
 
 function galleryFigures(model) {
@@ -124,9 +153,9 @@ function brandPage(brand) {
       <img src="${asset('../../../', brand.logo)}" alt="" />
       <div><p>${escapeHtml(brand.continente.toUpperCase())} / MARCA</p><h1>${escapeHtml(brand.nombre)}</h1><span>${count} ${count === 1 ? 'modelo' : 'modelos'} en el archivo</span></div>
     </header>
-    <section aria-label="Modelos de ${escapeHtml(brand.nombre)}" class="catalogue-grid">
-      ${brand.modelos.map(model => modelCard(brand, model)).join('\n      ')}
-    </section>
+    <div aria-label="Modelos de ${escapeHtml(brand.nombre)}" class="brand-decades">
+      ${decadeSections(brand)}
+    </div>
   </main>
 </body>
 </html>
@@ -155,9 +184,9 @@ for (const brand of catalog.marcas) {
   if (!safeImagePath(brand.logo) || !await exists(absolute(brand.logo))) throw new Error(`Falta el logo o su ruta no es válida: ${brand.logo}`);
   const modelFiles = new Set();
   for (const model of brand.modelos) {
-    if (!safeSegment(model.archivo) || !model.archivo.endsWith('.html') || !Number.isInteger(model.anio) || !model.nombre || !Array.isArray(model.galeria) || !model.galeria.length) throw new Error(`Modelo inválido: ${model.nombre}`);
-    if (modelFiles.has(model.archivo)) throw new Error(`Ficha duplicada: ${model.archivo}`);
-    modelFiles.add(model.archivo);
+    if (!Number.isInteger(model.anio) || model.anio < firstDecade || model.anio >= decadeLimit || !model.nombre || !Array.isArray(model.galeria) || (model.archivo && (!safeSegment(model.archivo) || !model.archivo.endsWith('.html') || !model.galeria.length)) || (!model.archivo && model.galeria.length)) throw new Error(`Modelo inválido: ${model.nombre}`);
+    if (model.archivo && modelFiles.has(model.archivo)) throw new Error(`Ficha duplicada: ${model.archivo}`);
+    if (model.archivo) modelFiles.add(model.archivo);
     for (const photo of model.galeria) {
       if (!safeImagePath(photo.archivo) || !photo.alt || !await exists(absolute(photo.archivo))) throw new Error(`Falta una imagen o su ruta o descripción no es válida: ${photo.archivo}`);
     }
@@ -172,6 +201,7 @@ for (const brand of catalog.marcas) {
   const folder = `modelos/${brand.continente}/${brand.nombre}`;
   await writeIfChanged(`${folder}/index.html`, brandPage(brand));
   for (const model of brand.modelos) {
+    if (!model.archivo) continue;
     const relative = `${folder}/${model.archivo}`;
     if (!await exists(absolute(relative))) {
       await writeIfChanged(relative, modelPage(brand, model));
