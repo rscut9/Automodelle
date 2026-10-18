@@ -3,22 +3,1063 @@
     {
       "nombre": "Audi",
       "continente": "Europa",
-      "logo": "assets/images/Europa/Audi/Audi-Logo_2016.svg",
+      "logo": "assets/images/Europa/Audi/Audi-Logo.svg",
       "modelos": [
         {
-          "nombre": "Audi A3 8L",
-          "anio": 1996,
-          "galeria": []
+          "nombre": "Audi Type A",
+          "anio": 1910,
+          "anioFin": 1912,
+          "archivo": "audi-type-a.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-A/Type-A.jpg",
+              "alt": "Audi Type A"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type B",
+          "anio": 1910,
+          "anioFin": 1914,
+          "archivo": "audi-type-b.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-B/Type-B.jpg",
+              "alt": "Audi Type B"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type C",
+          "anio": 1911,
+          "anioFin": 1925,
+          "archivo": "audi-type-c.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-C/Type-C.jpg",
+              "alt": "Audi Type C"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type D",
+          "anio": 1912,
+          "anioFin": 1920,
+          "archivo": "audi-type-d.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-D/Type-D.jpg",
+              "alt": "Audi Type D"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type E",
+          "anio": 1913,
+          "anioFin": 1924,
+          "archivo": "audi-type-e.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-E/Type-E.jpg",
+              "alt": "Audi Type E"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type G",
+          "anio": 1914,
+          "anioFin": 1923,
+          "archivo": "audi-type-g.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-G/Type-G.jpg",
+              "alt": "Audi Type G"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type K",
+          "anio": 1922,
+          "anioFin": 1925,
+          "archivo": "audi-type-k.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-K/Type-K.jpg",
+              "alt": "Audi Type K"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type M",
+          "anio": 1924,
+          "anioFin": 1928,
+          "archivo": "audi-type-m.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-M/Type-M.jpg",
+              "alt": "Audi Type M"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type R",
+          "anio": 1927,
+          "anioFin": 1929,
+          "archivo": "audi-type-r.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-R/Type-R.jpg",
+              "alt": "Audi Type R"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type SS",
+          "anio": 1929,
+          "anioFin": 1932,
+          "archivo": "audi-type-ss.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-SS/Type-SS.jpg",
+              "alt": "Audi Type SS"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type T",
+          "anio": 1931,
+          "anioFin": 1932,
+          "archivo": "audi-type-t.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-T/Type-T.jpg",
+              "alt": "Audi Type T"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Type P",
+          "anio": 1931,
+          "anioFin": 1932,
+          "archivo": "audi-type-p.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Type-P/Type-P.jpg",
+              "alt": "Audi Type P"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Front-UW-220",
+          "anio": 1933,
+          "anioFin": 1934,
+          "archivo": "audi-front-uw-220.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Front-UW-220/Front-UW-220.jpg",
+              "alt": "Audi Front-UW-220"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Front-UW-225",
+          "anio": 1935,
+          "anioFin": 1938,
+          "archivo": "audi-front-uw-225.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Front-UW-225/Front-UW-225.jpg",
+              "alt": "Audi Front-UW-225"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 920",
+          "anio": 1938,
+          "anioFin": 1940,
+          "archivo": "audi-920.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/920/920.jpg",
+              "alt": "Audi 920"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi F103 72",
+          "anio": 1965,
+          "anioFin": 1969,
+          "archivo": "audi-f103-72.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/F103-72/F103-72.jpg",
+              "alt": "Audi F103 72"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi F103 80",
+          "anio": 1966,
+          "anioFin": 1969,
+          "archivo": "audi-f103-80.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/F103-80/F103-80.jpg",
+              "alt": "Audi F103 80"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi F103 Super 90",
+          "anio": 1966,
+          "anioFin": 1972,
+          "archivo": "audi-f103-super-90.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/F103-Super-90/F103-Super-90.jpg",
+              "alt": "Audi F103 Super 90"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi F103 60",
+          "anio": 1968,
+          "anioFin": 1972,
+          "archivo": "audi-f103-60.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/F103-60/F103-60.png",
+              "alt": "Audi F103 60"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi F103 75",
+          "anio": 1968,
+          "anioFin": 1972,
+          "archivo": "audi-f103-75.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/F103-75/F103-75.jpg",
+              "alt": "Audi F103 75"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 50",
+          "anio": 1974,
+          "anioFin": 1978,
+          "archivo": "audi-50.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/50/50.jpg",
+              "alt": "Audi 50"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 80 B1",
+          "anio": 1972,
+          "anioFin": 1978,
+          "archivo": "audi-80-b1.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/80-B1/80-B1.webp",
+              "alt": "Audi 80 B1"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 80 B2",
+          "anio": 1978,
+          "anioFin": 1986,
+          "archivo": "audi-80-b2.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/80-B2/80-B2.webp",
+              "alt": "Audi 80 B2"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 80 B3",
+          "anio": 1986,
+          "anioFin": 1991,
+          "archivo": "audi-80-b3.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/80-B3/80-B3.jpg",
+              "alt": "Audi 80 B3"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 80 B4",
+          "anio": 1991,
+          "anioFin": 1994,
+          "archivo": "audi-80-b4.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/80-B4/80-B4.jpg",
+              "alt": "Audi 80 B4"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 90 B2",
+          "anio": 1984,
+          "anioFin": 1987,
+          "archivo": "audi-90-b2.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/90-B2/90-B2.jpg",
+              "alt": "Audi 90 B2"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 90 B3",
+          "anio": 1987,
+          "anioFin": 1991,
+          "archivo": "audi-90-b3.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/90-B3/90-B3.jpg",
+              "alt": "Audi 90 B3"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 100 C1",
+          "anio": 1968,
+          "anioFin": 1976,
+          "archivo": "audi-100-c1.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/100-C1/100-C1.webp",
+              "alt": "Audi 100 C1"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 100 C2",
+          "anio": 1976,
+          "anioFin": 1982,
+          "archivo": "audi-100-c2.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/100-C2/100-C2.jpg",
+              "alt": "Audi 100 C2"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 100 C3",
+          "anio": 1982,
+          "anioFin": 1990,
+          "archivo": "audi-100-c3.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/100-C3/100-C3.jpg",
+              "alt": "Audi 100 C3"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 100 C4",
+          "anio": 1990,
+          "anioFin": 1994,
+          "archivo": "audi-100-c4.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/100-C4/100-C4.jpg",
+              "alt": "Audi 100 C4"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 200 C2",
+          "anio": 1979,
+          "anioFin": 1982,
+          "archivo": "audi-200-c2.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/200-C2/200-C2.jpg",
+              "alt": "Audi 200 C2"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi 200 C3",
+          "anio": 1983,
+          "anioFin": 1991,
+          "archivo": "audi-200-c3.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/200-C3/200-C3.jpg",
+              "alt": "Audi 200 C3"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi V8",
+          "anio": 1988,
+          "anioFin": 1993,
+          "archivo": "audi-v8.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/V8/V8.webp",
+              "alt": "Audi V8"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Coupé B2",
+          "anio": 1980,
+          "anioFin": 1987,
+          "archivo": "audi-coupe-b2.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Coupe-B2/Coupe-B2.jpg",
+              "alt": "Audi Coupé B2"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Coupé B3",
+          "anio": 1988,
+          "anioFin": 1996,
+          "archivo": "audi-coupe-b3.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Coupe-B3/Coupe-B3.jpg",
+              "alt": "Audi Coupé B3"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Quattro WR",
+          "anio": 1980,
+          "anioFin": 1987,
+          "archivo": "audi-quattro-wr.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Quattro-WR/Quattro-WR.jpg",
+              "alt": "Audi Quattro WR"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Quattro MB",
+          "anio": 1987,
+          "anioFin": 1989,
+          "archivo": "audi-quattro-mb.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Quattro-MB/Quattro-MB.webp",
+              "alt": "Audi Quattro MB"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Quattro RR",
+          "anio": 1989,
+          "anioFin": 1991,
+          "archivo": "audi-quattro-rr.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Quattro-RR/Quattro-RR.jpg",
+              "alt": "Audi Quattro RR"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Sport Quattro",
+          "anio": 1984,
+          "anioFin": 1985,
+          "archivo": "audi-sport-quattro.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Sport-Quattro/Sport-Quattro.jpg",
+              "alt": "Audi Sport Quattro"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Cabriolet",
+          "anio": 1991,
+          "anioFin": 2000,
+          "archivo": "audi-cabriolet.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Cabriolet/Cabriolet.jpg",
+              "alt": "Audi Cabriolet"
+            }
+          ]
         },
         {
           "nombre": "Audi RS2 Avant",
           "anio": 1994,
-          "archivo": "audi-rs2-avant-1994.html",
+          "anioFin": 1995,
+          "archivo": "audi-rs2-avant.html",
           "galeria": [
             {
-              "archivo": "assets/images/Europa/Audi/RS2/audi-rs2-avant-1994.jpg",
+              "archivo": "assets/images/Europa/Audi/RS2/audi-rs2-avant.jpg",
               "alt": "Audi RS2 Avant azul visto de tres cuartos",
               "descripcion": "Audi RS2 Avant · 1994"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A4 B5",
+          "anio": 1994,
+          "anioFin": 2001,
+          "archivo": "audi-a4-b5.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A4-B5/A4-B5.jpg",
+              "alt": "Audi A4 B5"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A4 B6",
+          "anio": 2000,
+          "anioFin": 2004,
+          "archivo": "audi-a4-b6.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A4-B6/A4-B6.jpg",
+              "alt": "Audi A4 B6"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A4 B7",
+          "anio": 2004,
+          "anioFin": 2008,
+          "archivo": "audi-a4-b7.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A4-B7/A4-B7.webp",
+              "alt": "Audi A4 B7"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A4 B8",
+          "anio": 2007,
+          "anioFin": 2015,
+          "archivo": "audi-a4-b8.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A4-B8/A4-B8.jpg",
+              "alt": "Audi A4 B8"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A4 B9",
+          "anio": 2015,
+          "anioFin": 2025,
+          "archivo": "audi-a4-b9.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A4-B9/A4-B9.jpg",
+              "alt": "Audi A4 B9"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A5 8T",
+          "anio": 2007,
+          "anioFin": 2016,
+          "archivo": "audi-a5-8t.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A5-8T/A5-8T.jpg",
+              "alt": "Audi A5 8T"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A5 F5",
+          "anio": 2016,
+          "anioFin": 2024,
+          "archivo": "audi-a5-f5.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A5-F5/A5-F5.jpg",
+              "alt": "Audi A5 F5"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A5 B10",
+          "anio": 2024,
+          "archivo": "audi-a5-b10.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A5-B10/A5-B10.webp",
+              "alt": "Audi A5 B10"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A6 C4",
+          "anio": 1994,
+          "anioFin": 1997,
+          "archivo": "audi-a6-c4.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A6-C4/A6-C4.webp",
+              "alt": "Audi A6 C4"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A6 C5",
+          "anio": 1997,
+          "anioFin": 2004,
+          "archivo": "audi-a6-c5.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A6-C5/A6-C5.webp",
+              "alt": "Audi A6 C5"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A6 C6",
+          "anio": 2004,
+          "anioFin": 2011,
+          "archivo": "audi-a6-c6.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A6-C6/A6-C6.webp",
+              "alt": "Audi A6 C6"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A6 C7",
+          "anio": 2011,
+          "anioFin": 2018,
+          "archivo": "audi-a6-c7.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A6-C7/A6-C7.jpg",
+              "alt": "Audi A6 C7"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A6 C8",
+          "anio": 2018,
+          "anioFin": 2025,
+          "archivo": "audi-a6-c8.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A6-C8/A6-C8.jpg",
+              "alt": "Audi A6 C8"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A6 C9",
+          "anio": 2025,
+          "archivo": "audi-a6-c9.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A6-C9/A6-C9.jpg",
+              "alt": "Audi A6 C9"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A6 e-tron",
+          "anio": 2024,
+          "archivo": "audi-a6-e-tron.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A6-e-tron/A6-e-tron.jpg",
+              "alt": "Audi A6 e-tron"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A7 C7",
+          "anio": 2010,
+          "anioFin": 2018,
+          "archivo": "audi-a7-c7.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A7-C7/A7-C7.jpg",
+              "alt": "Audi A7 C7"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A7 C8",
+          "anio": 2018,
+          "anioFin": 2025,
+          "archivo": "audi-a7-c8.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A7-C8/A7-C8.jpg",
+              "alt": "Audi A7 C8"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A8 D2",
+          "anio": 1994,
+          "anioFin": 2002,
+          "archivo": "audi-a8-d2.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A8-D2/A8-D2.jpg",
+              "alt": "Audi A8 D2"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A8 D3",
+          "anio": 2002,
+          "anioFin": 2010,
+          "archivo": "audi-a8-d3.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A8-D3/A8-D3.jpg",
+              "alt": "Audi A8 D3"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A8 D4",
+          "anio": 2010,
+          "anioFin": 2017,
+          "archivo": "audi-a8-d4.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A8-D4/A8-D4.webp",
+              "alt": "Audi A8 D4"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A8 D5",
+          "anio": 2017,
+          "anioFin": 2026,
+          "archivo": "audi-a8-d5.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A8-D5/A8-D5.jpg",
+              "alt": "Audi A8 D5"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi TT 8N",
+          "anio": 1998,
+          "anioFin": 2006,
+          "archivo": "audi-tt-8n.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/TT-8N/TT-8N.webp",
+              "alt": "Audi TT 8N"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi TT 8J",
+          "anio": 2006,
+          "anioFin": 2014,
+          "archivo": "audi-tt-8j.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/TT-8J/TT-8J.jpg",
+              "alt": "Audi TT 8J"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi TT 8S",
+          "anio": 2014,
+          "anioFin": 2023,
+          "archivo": "audi-tt-8s.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/TT-8S/TT-8S.jpg",
+              "alt": "Audi TT 8S"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi R8 42",
+          "anio": 2006,
+          "anioFin": 2015,
+          "archivo": "audi-r8-42.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/R8-42/R8-42.jpg",
+              "alt": "Audi R8 42"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi R8 4S",
+          "anio": 2015,
+          "anioFin": 2024,
+          "archivo": "audi-r8-4s.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/R8-4S/R8-4S.jpg",
+              "alt": "Audi R8 4S"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q2",
+          "anio": 2016,
+          "anioFin": 2026,
+          "archivo": "audi-q2.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q2/Q2.jpg",
+              "alt": "Audi Q2"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q3 8U",
+          "anio": 2011,
+          "anioFin": 2018,
+          "archivo": "audi-q3-8u.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q3-8U/Q3-8U.jpg",
+              "alt": "Audi Q3 8U"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q3 F3",
+          "anio": 2018,
+          "anioFin": 2025,
+          "archivo": "audi-q3-f3.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q3-F3/Q3-F3.jpg",
+              "alt": "Audi Q3 F3"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q3 FJ",
+          "anio": 2025,
+          "archivo": "audi-q3-fj.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q3-FJ/Q3-FJ.jpg",
+              "alt": "Audi Q3 FJ"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q4 e-tron",
+          "anio": 2021,
+          "archivo": "audi-q4-e-tron.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q4-e-tron/Q4-e-tron.webp",
+              "alt": "Audi Q4 e-tron"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q5 8R",
+          "anio": 2008,
+          "anioFin": 2016,
+          "archivo": "audi-q5-8r.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q5-8R/Q5-8R.jpg",
+              "alt": "Audi Q5 8R"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q5 FY",
+          "anio": 2016,
+          "anioFin": 2024,
+          "archivo": "audi-q5-fy.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q5-FY/Q5-FY.jpg",
+              "alt": "Audi Q5 FY"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q5 GU",
+          "anio": 2024,
+          "archivo": "audi-q5-gu.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q5-GU/Q5-GU.jpg",
+              "alt": "Audi Q5 GU"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q6 e-tron",
+          "anio": 2024,
+          "archivo": "audi-q6-e-tron.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q6-e-tron/Q6-e-tron.jpg",
+              "alt": "Audi Q6 e-tron"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q7 4L",
+          "anio": 2005,
+          "anioFin": 2015,
+          "archivo": "audi-q7-4l.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q7-4L/Q7-4L.jpg",
+              "alt": "Audi Q7 4L"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q7 4M",
+          "anio": 2015,
+          "archivo": "audi-q7-4m.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q7-4M/Q7-4M.jpg",
+              "alt": "Audi Q7 4M"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q8",
+          "anio": 2018,
+          "archivo": "audi-q8.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q8/Q8.webp",
+              "alt": "Audi Q8"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi Q8 e-tron",
+          "anio": 2023,
+          "anioFin": 2025,
+          "archivo": "audi-q8-e-tron.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/Q8-e-tron/Q8-e-tron.jpg",
+              "alt": "Audi Q8 e-tron"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi e-tron GT",
+          "anio": 2021,
+          "archivo": "audi-e-tron-gt.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/e-tron-GT/e-tron-GT.jpg",
+              "alt": "Audi e-tron GT"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A3 8L",
+          "anio": 1996,
+          "anioFin": 2003,
+          "archivo": "audi-a3-8l.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A3-8L/A3-8L.jpg",
+              "alt": "Audi A3 8L"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A3 8P",
+          "anio": 2003,
+          "anioFin": 2013,
+          "archivo": "audi-a3-8p.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A3-8P/A3-8P.jpg",
+              "alt": "Audi A3 8P"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A3 8V",
+          "anio": 2012,
+          "anioFin": 2020,
+          "archivo": "audi-a3-8v.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A3-8V/A3-8V.webp",
+              "alt": "Audi A3 8V"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A3 8Y",
+          "anio": 2020,
+          "archivo": "audi-a3-8y.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A3-8Y/A3-8Y.jpg",
+              "alt": "Audi A3 8Y"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A1 8X",
+          "anio": 2010,
+          "anioFin": 2018,
+          "archivo": "audi-a1-8x.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A1-8X/A1-8X.jpg",
+              "alt": "Audi A1 8X"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A1 GB",
+          "anio": 2018,
+          "anioFin": 2026,
+          "archivo": "audi-a1-gb.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A1-GB/A1-GB.jpg",
+              "alt": "Audi A1 GB"
+            }
+          ]
+        },
+        {
+          "nombre": "Audi A2 8Z",
+          "anio": 1999,
+          "anioFin": 2005,
+          "archivo": "audi-a2-8z.html",
+          "galeria": [
+            {
+              "archivo": "assets/images/Europa/Audi/A2-8Z/A2-8Z.jpg",
+              "alt": "Audi A2 8Z"
             }
           ]
         }
